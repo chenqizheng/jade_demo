@@ -1,0 +1,52 @@
+h1 link
+a(href=url) #{title}
+
+h1 case
+-var friends = 10;
+case friends
+    when 0
+        p you have no friends
+    when 1
+        p you have a friend
+    default
+        p you have #{friends} friends
+
+
+h1 for
+-for(var i=0;i < 3;i++)
+    li item#{i}
+
+h1 comment
+// comment
+
+h1 if else
+-var test=true
+if test
+    p test=true
+else
+    p test=false
+
+h1 include
+
+include Include.jade
+
+h1 each
+
+ul
+    each val,index  in ["1","2","3"]
+        li=index+ "+" + val
+
+h1 mixin
+
+mixin list(id,...items)
+    ul(id=id)
+        each item in items
+            li=item
+
++list("list",1,2,3,4)
+
+h1 Tag
+
+React/
+
+React(id="react")/
